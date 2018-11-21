@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>Formulario Se Então</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,11 +15,27 @@
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
-					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
-					%>
+					<h1>Enviar</h1>
+					<h1>Formulário se então </h1>
+					<br/>
+					<h3>A chamada deve alterar de acordo com o input</h3>
+					<br/>
+					<h4>Deseja visualizar o conteúdo? Digite sua escolha.</h4>					
+					<br/>
+					
+					<ul>
+						<li>Digite sim</li>
+						<li>Digite não</li>
+					</ul>
+					
+					<br/>
+					
+					<form method="post" action="ifElseRecept.jsp">
+						<input type="text" name="escolha" id="escolha"/>
+						<br/>
+						<input type="submit" name="Enviar"/>
+					</form>
+				
 				</div>
 			</div>
 		</main>

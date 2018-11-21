@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>Enviar</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,10 +15,15 @@
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
+					<h1>Enviar</h1>
+					<form method="post" action="recept.jsp">
+						<input type="text" name="valor" id="valor"/>
+						<br/>
+						<input type="submit" name="Enviar"/>
+					
+					</form>
 					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
+						
 					%>
 				</div>
 			</div>

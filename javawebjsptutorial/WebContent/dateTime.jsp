@@ -4,21 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>Data</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	
 	<%@include file="header.jsp" %>
-
+	
 	<div id="wrapper">
 	
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
+					<h1>Data e tempo</h1>
+					
 					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
+						out.print("Hoje é dia "+ java.util.Calendar.getInstance().getTime());
 					%>
 				</div>
 			</div>

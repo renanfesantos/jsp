@@ -4,16 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>template</title>
+<title>Template</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header id="header">
-		<div class="innertube">
-			<h1>Curso de JSP</h1>
-		</div>
-	</header>
-
+	
+	<%@include file="header.jsp" %>
+	
 	<div id="wrapper">
 	
 		<main>
@@ -23,40 +20,12 @@
 				</div>
 			</div>
 		</main>
+	
+		<%@include file="menu.jsp" %>
 		
-		<nav class="nav">
-			<div class="innertube">
-				<h1>Menu de links</h1>
-				<ul>
-					<li><a href=#>Link 1</a></li>
-					<li><a href=#>Link 2</a></li>
-					<li><a href=#>Link 3</a></li>
-					<li><a href=#>Link 4</a></li>
-					<li><a href=#>Link 5</a></li>
-				</ul>
-				<h1>Menu de links</h1>
-				<ul>
-					<li><a href=#>Link 1</a></li>
-					<li><a href=#>Link 2</a></li>
-					<li><a href=#>Link 3</a></li>
-					<li><a href=#>Link 4</a></li>
-					<li><a href=#>Link 5</a></li>
-				</ul>
-				<h1>Menu de links</h1>
-				<ul>
-					<li><a href=#>Link 1</a></li>
-					<li><a href=#>Link 2</a></li>
-					<li><a href=#>Link 3</a></li>
-					<li><a href=#>Link 4</a></li>
-					<li><a href=#>Link 5</a></li>
-				</ul>
-			</div>
-		</nav>
 	</div>
-	<footer id="footer">
-	<div class="innertube">
-		<h1>Rodapé</h1>
-	</div>
-	</footer>
+		
+	<%@include file="footer.jsp" %>
+
 </body>
 </html>

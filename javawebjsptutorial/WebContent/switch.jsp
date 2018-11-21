@@ -4,23 +4,41 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>Switch</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	
 	<%@include file="header.jsp" %>
-
+	
 	<div id="wrapper">
 	
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
+					<h1>Switch</h1>
+
 					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
+						int varInt = 3;
+	
+						switch (varInt) {
+						case 1:
+							out.print("Igual a um.");
+							break;
+						case 2:
+							out.print("Igual a dois.");
+							break;
+						case 3:
+							out.print("Igual a três.");
+							break;
+						default:
+							out.print("Diferente de tudo!s");
+	
+						}
 					%>
-				</div>
+
+
+			</div>
 			</div>
 		</main>
 	

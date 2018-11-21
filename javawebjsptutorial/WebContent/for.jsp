@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>For</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,12 +15,23 @@
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
-					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
+					<h1>1 - Laço for</h1>
+					<% 
+						for (int i = 0; i < 10; i++){
+							out.println("O valor de i é = " + i + "<br/>");
+						} 
+					
 					%>
-				</div>
+					<br/>
+					<h1>2 - Laço com htlm no Java</h1>
+					<table border=1>
+						<%
+							for (int i = 0; i < 10; i++) {
+								out.println("<tr> <td> " + i + " </td> </tr>");
+							}
+						%>
+					</table>
+			</div>
 			</div>
 		</main>
 	

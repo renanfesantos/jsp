@@ -4,21 +4,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Get IP</title>
+<title>toRedirect</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	
 	<%@include file="header.jsp" %>
-
+	
 	<div id="wrapper">
 	
 		<main>
 			<div id="content">
 				<div class="innertube">
-					<h1>Conteúdo</h1>
+					<h1>Redirecionando</h1>
+					
 					<%
-						out.print("Olá usuário, seu IP é: " + request.getRemoteAddr());
-						out.print("<br/> Conxtexto da execução "+request.getContextPath());
+						
+						int varInt = 0;
+						if(request.getParameter("escolhaUsuario") != null){
+							varInt = Integer.parseInt(request.getParameter("escolhaUsuario"));
+						}
+					
+						if(varInt == 1){
+							out.print("Você decidiu ficar na página 1.");
+						} else if(varInt == 2){
+							response.sendRedirect("https://www.google.com");
+						} else {
+							response.sendRedirect("index.jsp");
+						}
 					%>
 				</div>
 			</div>
